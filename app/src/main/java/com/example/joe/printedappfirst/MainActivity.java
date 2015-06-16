@@ -4,13 +4,21 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
+
+    private Button NewOrderChosen, ReviewOrderChosen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        NewOrderChosen = (Button) findViewById(R.id.new_order_chosen);
+        ReviewOrderChosen = (Button) findViewById(R.id.review_order_chosen);
     }
 
     @Override
@@ -33,5 +41,15 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onNewOrderClick(View view) {
+        String NewResponse = "You said new order";
+        Toast.makeText(this, NewResponse, Toast.LENGTH_SHORT).show();
+    }
+
+    public void onReviewOrderClick(View view){
+        String ReviewResponse = "You said review order";
+        Toast.makeText(this, ReviewResponse, Toast.LENGTH_SHORT).show();
     }
 }
