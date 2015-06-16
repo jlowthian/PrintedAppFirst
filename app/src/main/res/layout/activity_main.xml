@@ -12,17 +12,20 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New order"
-        android:textSize="30dp"
-        android:padding="150dp"
-        android:id="@+id/new_order_chosen"/>
+        android:layout_marginBottom="15dp"
+        android:text="@string/new_order"
+        android:textSize="30sp"
+        android:padding="15dp"
+        android:id="@+id/new_order_chosen"
+        android:onClick="getMe"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Review order"
-        android:textSize="30dp"
-        android:padding="150dp"
+        android:text="@string/review_order"
+        android:textSize="30sp"
+        android:padding="15dp"
         android:id="@+id/review_order_chosen"/>
 
 

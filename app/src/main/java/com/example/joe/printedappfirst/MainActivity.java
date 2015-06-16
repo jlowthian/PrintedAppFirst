@@ -1,6 +1,7 @@
 package com.example.joe.printedappfirst;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-    private Button NewOrderChosen, ReviewOrderChosen;
+    private static Button NewOrderChosen, ReviewOrderChosen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,17 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         NewOrderChosen = (Button) findViewById(R.id.new_order_chosen);
-        ReviewOrderChosen = (Button) findViewById(R.id.review_order_chosen);
+        NewOrderChosen.setOnClickListener(
+                new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newIntent = new Intent("com.example.joe.printedappfirst.SecondActivity");
+                startActivity(newIntent);
+
+            }
+        });
+
+
     }
 
     @Override
