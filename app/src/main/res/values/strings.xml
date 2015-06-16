@@ -6,4 +6,6 @@
     <string name="new_order">New order</string>
     <string name="review_order">Review order</string>
     <string name="title_activity_second">SecondActivity</string>
+    <string name="previous_button">Previous</string>
+    <string name="next_button">Next</string>
 </resources>
