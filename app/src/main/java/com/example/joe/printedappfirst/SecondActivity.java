@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.content.Intent;
+
 
 
 public class SecondActivity extends Activity {
@@ -16,9 +19,33 @@ public class SecondActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        PreviousButton = (Button) findViewById(R.id.previous_button);
+        NextButton = (Button) findViewById(R.id.next_button);
+        NextButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent NextIntent = new Intent(SecondActivity.this, ThirdActivity.class);
+                        startActivity(NextIntent);
+                    }
+                }
+        );
 
-    }
+        /*
+        PreviousButton = (Button) findViewById(R.id.previous_button);
+        PreviousButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent PreviousIntent = new Intent(SecondActivity.this, MainActivity.class);
+                        startActivity(PreviousIntent);
+                    }
+                }
+        );
+        */
+        };
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
