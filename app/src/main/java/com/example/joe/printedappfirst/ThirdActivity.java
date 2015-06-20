@@ -4,14 +4,38 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
+
+import java.util.ArrayList;
 
 
 public class ThirdActivity extends Activity {
+
+    private static EditText NumberOfGarments;
+    private static CheckBox GarmentChecker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
+
+        final ArrayList[] NoOfGarmentTexts = {};
+
+        NumberOfGarments = (EditText) findViewById(R.id.number_of_garments);
+        final Integer NoOfGarments = Integer.parseInt(String.valueOf(NumberOfGarments)); //This is to convert input from string to an int
+        GarmentChecker.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        for (int GarmentCount = 1; GarmentCount <= NoOfGarments; GarmentCount++) {
+                            NoOfGarmentTexts[GarmentCount] = new ArrayList(); // This doesn't work
+                        }
+                    }
+                }
+        );
+
     }
 
     @Override

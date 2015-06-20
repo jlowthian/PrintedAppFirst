@@ -34,6 +34,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".GarmentDetails"
+            android:label="@string/title_activity_garment_details" >
+        </activity>
     </application>
 
 </manifest>

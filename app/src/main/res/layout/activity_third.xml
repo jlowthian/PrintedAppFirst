@@ -7,13 +7,33 @@
     tools:context="com.example.joe.printedappfirst.ThirdActivity"
     android:orientation="vertical">
 
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Number of garments"
+            android:id="@+id/number_of_garments"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:id="@+id/no_garments_check"/>
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/printing_method"
         android:textSize="30dp"
         android:textStyle="bold" />
-    
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,7 +100,7 @@
             android:layout_gravity="right">
         </CheckBox>
     </LinearLayout>
-    
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -99,14 +119,15 @@
         android:orientation="horizontal">
 
         <ScrollView
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="100dp">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Type here"
-            android:textSize="25sp"/>
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type here"
+                android:textSize="25sp"/>
 
         </ScrollView>
 
